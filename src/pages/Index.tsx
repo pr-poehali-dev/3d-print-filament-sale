@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Icon from '@/components/ui/icon';
@@ -91,22 +90,22 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary to-blue-500 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-blue-500 rounded-lg flex items-center justify-center">
                 <Icon name="Box" size={24} className="text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-dark-gray">3D FILAMENT STORE</h1>
+                <h1 className="text-2xl font-bold text-gray-800">3D FILAMENT STORE</h1>
                 <p className="text-sm text-gray-600">Профессиональные материалы для 3D печати</p>
               </div>
             </div>
             <nav className="hidden md:flex space-x-6">
-              <a href="#" className="text-dark-gray hover:text-primary transition-colors">Главная</a>
-              <a href="#" className="text-dark-gray hover:text-primary transition-colors">Каталог</a>
-              <a href="#" className="text-dark-gray hover:text-primary transition-colors">О нас</a>
-              <a href="#" className="text-dark-gray hover:text-primary transition-colors">Доставка</a>
-              <a href="#" className="text-dark-gray hover:text-primary transition-colors">Контакты</a>
+              <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors">Главная</a>
+              <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors">Каталог</a>
+              <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors">О нас</a>
+              <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors">Доставка</a>
+              <a href="#" className="text-gray-700 hover:text-orange-500 transition-colors">Контакты</a>
             </nav>
-            <Button className="bg-primary hover:bg-primary/90">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white">
               <Icon name="ShoppingCart" size={20} className="mr-2" />
               Корзина
             </Button>
@@ -115,11 +114,11 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-blue-gradient text-white py-20">
+      <section className="bg-gradient-to-r from-orange-500 to-blue-500 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-5xl font-bold mb-6">Лучшие филаменты для 3D печати</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">Широкий выбор качественных материалов для всех типов 3D принтеров. Быстрая доставка по всей России.</p>
-          <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
+          <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100">
             <Icon name="ArrowDown" size={20} className="mr-2" />
             Смотреть каталог
           </Button>
@@ -130,7 +129,7 @@ const Index = () => {
       <section className="py-8 bg-white border-b">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-4 items-center">
-            <h3 className="text-lg font-semibold text-dark-gray mr-4">Фильтры:</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mr-4">Фильтры:</h3>
             
             <Select value={selectedMaterial} onValueChange={setSelectedMaterial}>
               <SelectTrigger className="w-[180px]">
@@ -189,7 +188,7 @@ const Index = () => {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="text-3xl font-bold text-dark-gray">Каталог филаментов</h3>
+            <h3 className="text-3xl font-bold text-gray-800">Каталог филаментов</h3>
             <p className="text-gray-600">Найдено: {filteredFilaments.length} товаров</p>
           </div>
           
@@ -202,12 +201,12 @@ const Index = () => {
                     alt={filament.name}
                     className="w-full h-48 object-cover rounded-t-lg"
                   />
-                  <Badge className="absolute top-2 right-2 bg-primary">
+                  <Badge className="absolute top-2 right-2 bg-orange-500 text-white">
                     {filament.material}
                   </Badge>
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-lg text-dark-gray">{filament.name}</CardTitle>
+                  <CardTitle className="text-lg text-gray-800">{filament.name}</CardTitle>
                   <CardDescription>{filament.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -216,11 +215,11 @@ const Index = () => {
                       <Badge variant="outline">{filament.color}</Badge>
                       <Badge variant="outline">{filament.diameter}</Badge>
                     </div>
-                    <span className="text-2xl font-bold text-primary">{filament.price}₽</span>
+                    <span className="text-2xl font-bold text-orange-500">{filament.price}₽</span>
                   </div>
                   
                   <div className="flex space-x-2">
-                    <Button className="flex-1 bg-primary hover:bg-primary/90">
+                    <Button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white">
                       <Icon name="ShoppingCart" size={16} className="mr-2" />
                       В корзину
                     </Button>
@@ -241,27 +240,27 @@ const Index = () => {
       {/* Features Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl font-bold text-center text-dark-gray mb-12">Почему выбирают нас</h3>
+          <h3 className="text-3xl font-bold text-center text-gray-800 mb-12">Почему выбирают нас</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary to-blue-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Truck" size={32} className="text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-dark-gray mb-2">Быстрая доставка</h4>
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">Быстрая доставка</h4>
               <p className="text-gray-600">Доставка по Москве в день заказа, по России за 1-3 дня</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary to-blue-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Shield" size={32} className="text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-dark-gray mb-2">Гарантия качества</h4>
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">Гарантия качества</h4>
               <p className="text-gray-600">Только проверенные производители и сертифицированные материалы</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary to-blue-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Icon name="Headphones" size={32} className="text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-dark-gray mb-2">Поддержка 24/7</h4>
+              <h4 className="text-xl font-semibold text-gray-800 mb-2">Поддержка 24/7</h4>
               <p className="text-gray-600">Наши эксперты помогут выбрать подходящий материал</p>
             </div>
           </div>
@@ -269,7 +268,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-dark-gray text-white py-12">
+      <footer className="bg-gray-800 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
