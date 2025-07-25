@@ -259,7 +259,7 @@ const Index = () => {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-primary to-blue-gradient rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon name="HeadphonesIcon" size={32} className="text-white" />
+                <Icon name="Headphones" size={32} className="text-white" />
               </div>
               <h4 className="text-xl font-semibold text-dark-gray mb-2">Поддержка 24/7</h4>
               <p className="text-gray-600">Наши эксперты помогут выбрать подходящий материал</p>
